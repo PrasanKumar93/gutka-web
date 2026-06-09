@@ -31,8 +31,8 @@
     var b = D.brand || {};
     return '<span class="brand__mark">' + (b.logoText || "M") + '</span>' +
       '<span class="brand__text">' +
-        '<span class="brand__name">' + b.name + '<sup>' + (b.tm || "") + '</sup></span>' +
-        '<span class="brand__sub">Pan Masala</span>' +
+      '<span class="brand__name">' + b.name + '<sup>' + (b.tm || "") + '</sup></span>' +
+      '<span class="brand__sub">Pan Masala</span>' +
       '</span>';
   }
 
@@ -69,16 +69,16 @@
     el("home").innerHTML =
       '<div class="hero__bg"><img src="' + h.image + '" alt="' + b.name + ' Pan Masala" /></div>' +
       '<div class="container"><div class="hero__inner">' +
-        '<span class="hero__kicker reveal in">' + (h.kicker || "") + '</span>' +
-        '<h1 class="hero__name reveal in" data-delay="1">' + b.name + '<sup>' + (b.tm || "") + '</sup></h1>' +
-        '<div class="hero__title-hi reveal in" data-delay="1">' + (t.primaryHi || "") + '</div>' +
-        '<div class="hero__sub-hi reveal in" data-delay="2">' + (t.secondaryHi || "") + '</div>' +
-        '<p class="hero__en reveal in" data-delay="2">' + (t.english || "") + '</p>' +
-        '<div class="hero__badge reveal in" data-delay="2"><span class="dot"></span>' + (w.panMasalaBadge || "") + '</div>' +
-        '<div class="hero__cta reveal in" data-delay="3">' +
-          '<a class="btn btn--gold" href="' + ((h.ctaPrimary && h.ctaPrimary.href) || "#products") + '">' + ((h.ctaPrimary && h.ctaPrimary.label) || "Explore") + '</a>' +
-          '<a class="btn btn--ghost" href="' + secHref + '"' + secTarget + '>' + (secondary.label || "Enquire") + '</a>' +
-        '</div>' +
+      '<span class="hero__kicker reveal in">' + (h.kicker || "") + '</span>' +
+      '<h1 class="hero__name reveal in" data-delay="1">' + b.name + '<sup>' + (b.tm || "") + '</sup></h1>' +
+      '<div class="hero__title-hi reveal in" data-delay="1">' + (t.primaryHi || "") + '</div>' +
+      '<div class="hero__sub-hi reveal in" data-delay="2">' + (t.secondaryHi || "") + '</div>' +
+      '<p class="hero__en reveal in" data-delay="2">' + (t.english || "") + '</p>' +
+      '<div class="hero__badge reveal in" data-delay="2"><span class="dot"></span>' + (w.panMasalaBadge || "") + '</div>' +
+      '<div class="hero__cta reveal in" data-delay="3">' +
+      '<a class="btn btn--gold" href="' + ((h.ctaPrimary && h.ctaPrimary.href) || "#products") + '">' + ((h.ctaPrimary && h.ctaPrimary.label) || "Explore") + '</a>' +
+      '<a class="btn btn--ghost" href="' + secHref + '"' + secTarget + '>' + (secondary.label || "Enquire") + '</a>' +
+      '</div>' +
       '</div></div>' +
       '<div class="hero__scroll"><div class="mouse"></div>Scroll</div>';
   }
@@ -94,17 +94,17 @@
     el("about").className = "section section--alt about";
     el("about").innerHTML =
       '<div class="container">' +
-        '<div class="about__grid">' +
-          '<div class="about__copy reveal">' +
-            '<span class="eyebrow">About Us</span>' +
-            '<h2 class="about__heading">' + a.heading + '</h2>' +
-            '<div class="gold-rule gold-rule--left"></div>' +
-            '<p class="about__lead">' + a.lead + '</p>' +
-            '<div class="about__text">' + paras + '</div>' +
-          '</div>' +
-          '<div class="about__media reveal" data-delay="1"><img src="assets/img/box-sachet.jpg" alt="Manikchand product" loading="lazy" /></div>' +
-        '</div>' +
-        '<div class="stats">' + stats + '</div>' +
+      '<div class="about__grid">' +
+      '<div class="about__copy reveal">' +
+      '<span class="eyebrow">About Us</span>' +
+      '<h2 class="about__heading">' + a.heading + '</h2>' +
+      '<div class="gold-rule gold-rule--left"></div>' +
+      '<p class="about__lead">' + a.lead + '</p>' +
+      '<div class="about__text">' + paras + '</div>' +
+      '</div>' +
+      '<div class="about__media reveal" data-delay="1"><img src="assets/img/box-sachet.jpg" alt="Manikchand product" loading="lazy" /></div>' +
+      '</div>' +
+      '<div class="stats">' + stats + '</div>' +
       '</div>';
   }
 
@@ -136,26 +136,26 @@
     return '<article class="card reveal">' +
       '<div class="card__media">' + media + ribbon + '</div>' +
       '<div class="card__body">' +
-        '<div class="card__tags">' + tags + '</div>' +
-        '<h3 class="card__name">' + p.name + '</h3>' +
-        '<p class="card__desc">' + p.desc + '</p>' +
-        meta +
-        '<div class="' + warnCls + '">' + warnText + '</div>' +
+      '<div class="card__tags">' + tags + '</div>' +
+      '<h3 class="card__name">' + p.name + '</h3>' +
+      '<p class="card__desc">' + p.desc + '</p>' +
+      meta +
+      '<div class="' + warnCls + '">' + warnText + '</div>' +
       '</div>' +
-    '</article>';
+      '</article>';
   }
 
   function renderProducts() {
     var cards = (D.products || []).map(productCard).join("");
     el("products").innerHTML =
       '<div class="container">' +
-        '<div class="section__head reveal">' +
-          '<span class="eyebrow">Our Range</span>' +
-          '<h2 class="section__title">Crafted for the Connoisseur</h2>' +
-          '<div class="gold-rule"></div>' +
-          '<p class="section__lead">From premium flavoured pan masala to mouth fresheners and export-quality blends, every product carries the Manikchand promise of purity and taste.</p>' +
-        '</div>' +
-        '<div class="product-grid">' + cards + '</div>' +
+      '<div class="section__head reveal">' +
+      '<span class="eyebrow">Our Range</span>' +
+      '<h2 class="section__title">Crafted for the Connoisseur</h2>' +
+      '<div class="gold-rule"></div>' +
+      '<p class="section__lead">From premium flavoured pan masala to mouth fresheners and export-quality blends, every product carries the Manikchand promise of purity and taste.</p>' +
+      '</div>' +
+      '<div class="product-grid">' + cards + '</div>' +
       '</div>';
   }
 
@@ -169,13 +169,13 @@
 
     el("quality").innerHTML =
       '<div class="container">' +
-        '<div class="section__head reveal">' +
-          '<span class="eyebrow">Quality & Craftsmanship</span>' +
-          '<h2 class="section__title">Quality Is Our Identity</h2>' +
-          '<div class="gold-rule"></div>' +
-          '<p class="section__lead">At Manikchand, quality is not an act, it is our identity. Every step is governed by global standards.</p>' +
-        '</div>' +
-        '<div class="pillars">' + pillars + '</div>' +
+      '<div class="section__head reveal">' +
+      '<span class="eyebrow">Quality & Craftsmanship</span>' +
+      '<h2 class="section__title">Quality Is Our Identity</h2>' +
+      '<div class="gold-rule"></div>' +
+      '<p class="section__lead">At Manikchand, quality is not an act, it is our identity. Every step is governed by global standards.</p>' +
+      '</div>' +
+      '<div class="pillars">' + pillars + '</div>' +
       '</div>';
   }
 
@@ -186,19 +186,19 @@
     }).join("");
 
     var vids = (D.videos || []).map(function (v) {
-      return '<div class="video-card reveal"><video controls preload="metadata" poster="' + (v.poster || "") + '"><source src="' + v.src + '" type="video/mp4" /></video></div>';
+      return '<div class="video-card reveal"><video controls controlsList="nodownload noplaybackrate noremoteplayback" disablePictureInPicture disableRemotePlayback preload="metadata" poster="' + (v.poster || "") + '"><source src="' + v.src + '" type="video/mp4" /></video></div>';
     }).join("");
 
     el("gallery").className = "section section--alt gallery";
     el("gallery").innerHTML =
       '<div class="container">' +
-        '<div class="section__head reveal">' +
-          '<span class="eyebrow">Gallery & Media</span>' +
-          '<h2 class="section__title">The Manikchand World</h2>' +
-          '<div class="gold-rule"></div>' +
-        '</div>' +
-        '<div class="masonry">' + imgs + '</div>' +
-        (vids ? '<h3 class="videos__title">Watch Our Story</h3><div class="videos">' + vids + '</div>' : '') +
+      '<div class="section__head reveal">' +
+      '<span class="eyebrow">Gallery & Media</span>' +
+      '<h2 class="section__title">The Manikchand World</h2>' +
+      '<div class="gold-rule"></div>' +
+      '</div>' +
+      '<div class="masonry">' + imgs + '</div>' +
+      (vids ? '<h3 class="videos__title">Watch Our Videos</h3><div class="videos">' + vids + '</div>' : '') +
       '</div>';
   }
 
@@ -215,30 +215,30 @@
     if (bank.show) {
       bankRows =
         '<div class="bank">' +
-          '<h4>Company Bank Details</h4>' +
-          bankRow("Bank", bank.name) +
-          bankRow("A/C Name", bank.accountName) +
-          bankRow("A/C Number", bank.accountNumber) +
-          bankRow("IFSC", bank.ifsc) +
+        '<h4>Company Bank Details</h4>' +
+        bankRow("Bank", bank.name) +
+        bankRow("A/C Name", bank.accountName) +
+        bankRow("A/C Number", bank.accountNumber) +
+        bankRow("IFSC", bank.ifsc) +
         '</div>';
     }
 
     el("contact").innerHTML =
       '<div class="container">' +
-        '<div class="section__head reveal">' +
-          '<span class="eyebrow">Get In Touch</span>' +
-          '<h2 class="section__title">Contact & Enquiry</h2>' +
-          '<div class="gold-rule"></div>' +
-        '</div>' +
-        '<div class="contact__grid">' +
-          '<div class="contact__cards reveal">' + items + '</div>' +
-          '<div class="enquiry reveal" data-delay="1">' +
-            '<h3>For Dealership & Bulk Orders</h3>' +
-            '<p>' + (c.enquiryNote || "") + '</p>' +
-            '<a class="btn btn--whatsapp" target="_blank" rel="noopener" href="' + waLink("Hello Manikchand, I am interested in dealership / bulk orders. My details: ") + '">Send Enquiry on WhatsApp</a>' +
-            bankRows +
-          '</div>' +
-        '</div>' +
+      '<div class="section__head reveal">' +
+      '<span class="eyebrow">Get In Touch</span>' +
+      '<h2 class="section__title">Contact & Enquiry</h2>' +
+      '<div class="gold-rule"></div>' +
+      '</div>' +
+      '<div class="contact__grid">' +
+      '<div class="contact__cards reveal">' + items + '</div>' +
+      '<div class="enquiry reveal" data-delay="1">' +
+      '<h3>For Dealership & Bulk Orders</h3>' +
+      '<p>' + (c.enquiryNote || "") + '</p>' +
+      '<a class="btn btn--whatsapp" target="_blank" rel="noopener" href="' + waLink("Hello Manikchand, I am interested in dealership / bulk orders. My details: ") + '">Send Enquiry on WhatsApp</a>' +
+      bankRows +
+      '</div>' +
+      '</div>' +
       '</div>';
   }
 
@@ -247,7 +247,7 @@
       '<div class="contact-item__icon">' + icon + '</div>' +
       '<div><div class="contact-item__label">' + label + '</div>' +
       (href ? '<a class="contact-item__value" href="' + href + '"' + (/^https/.test(href) ? ' target="_blank" rel="noopener"' : '') + '>' + value + '</a>'
-            : '<div class="contact-item__value">' + value + '</div>') +
+        : '<div class="contact-item__value">' + value + '</div>') +
       '</div>';
     return '<div class="contact-item">' + inner + '</div>';
   }
@@ -262,19 +262,19 @@
 
     el("footer").innerHTML =
       '<div class="container">' +
-        '<div class="footer__top">' +
-          '<div class="footer__brand">' +
-            '<a href="#home" class="brand">' + brandMarkup() + '</a>' +
-            '<div class="footer__tagline">' + (f.tagline || "") + '</div>' +
-            '<p class="footer__desc">Manufactured by ' + (D.brand.parent || "") + ', ' + (D.brand.location || "") + '</p>' +
-          '</div>' +
-          '<div class="footer__col"><h4>Explore</h4>' + navLinks + '</div>' +
-          '<div class="footer__col"><h4>Contact</h4>' +
-            '<a href="tel:' + (c.tollFreeRaw || "") + '">Toll Free: ' + c.tollFree + '</a>' +
-            '<a href="' + waLink("") + '" target="_blank" rel="noopener">WhatsApp: ' + c.whatsapp + '</a>' +
-            '<a href="mailto:' + c.email + '">' + c.email + '</a>' +
-          '</div>' +
-        '</div>' +
+      '<div class="footer__top">' +
+      '<div class="footer__brand">' +
+      '<a href="#home" class="brand">' + brandMarkup() + '</a>' +
+      '<div class="footer__tagline">' + (f.tagline || "") + '</div>' +
+      '<p class="footer__desc">Manufactured by ' + (D.brand.parent || "") + ', ' + (D.brand.location || "") + '</p>' +
+      '</div>' +
+      '<div class="footer__col"><h4>Explore</h4>' + navLinks + '</div>' +
+      '<div class="footer__col"><h4>Contact</h4>' +
+      '<a href="tel:' + (c.tollFreeRaw || "") + '">Toll Free: ' + c.tollFree + '</a>' +
+      '<a href="' + waLink("") + '" target="_blank" rel="noopener">WhatsApp: ' + c.whatsapp + '</a>' +
+      '<a href="mailto:' + c.email + '">' + c.email + '</a>' +
+      '</div>' +
+      '</div>' +
       '</div>' +
       '<div class="footer__warn"><b>Statutory Warning:</b> ' + w.panMasalaHealth + ' Tobacco is injurious to health. ' + w.minors + ' This website is intended for adults only.</div>' +
       '<div class="footer__bar">&copy; ' + new Date().getFullYear() + ' ' + (f.copyright || "") + '</div>';
@@ -372,6 +372,41 @@
     });
   }
 
+  /* ---------- Image protection ----------
+   * Deters casual saving: blocks right-click on media, image dragging,
+   * and the common save/copy keyboard shortcuts. 
+   */
+  function initImageProtection() {
+    var settings = D.settings || {};
+    if (!settings.protectImages) return;
+
+    document.body.classList.add("no-image-save");
+
+    function isMedia(t) {
+      return t && (t.tagName === "IMG" || t.tagName === "VIDEO" ||
+        (t.classList && t.classList.contains("hero__bg")) ||
+        (t.closest && t.closest(".hero__bg, .masonry__item, .card__media, .about__media, .video-card")));
+    }
+
+    // Block right-click context menu on media (allow elsewhere).
+    document.addEventListener("contextmenu", function (e) {
+      if (isMedia(e.target)) e.preventDefault();
+    });
+
+    // Block dragging images to desktop / another tab.
+    document.addEventListener("dragstart", function (e) {
+      if (e.target && e.target.tagName === "IMG") e.preventDefault();
+    });
+
+    // Block Ctrl/Cmd+S (save page) and Ctrl/Cmd+U (view source) as a soft deterrent.
+    document.addEventListener("keydown", function (e) {
+      var key = (e.key || "").toLowerCase();
+      if ((e.ctrlKey || e.metaKey) && (key === "s" || key === "u")) {
+        e.preventDefault();
+      }
+    });
+  }
+
   /* ---------- Boot ---------- */
   function init() {
     if (!window.SITE_DATA) { console.error("SITE_DATA not found. Check js/data.js"); return; }
@@ -385,6 +420,7 @@
     renderContact();
     renderFooter();
     initInteractions();
+    initImageProtection();
   }
 
   if (document.readyState === "loading") {

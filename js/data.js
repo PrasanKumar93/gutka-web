@@ -13,6 +13,13 @@
  */
 
 window.SITE_DATA = {
+  /* -------- Settings --------
+   * protectImages: deter casual image saving (right-click, drag).
+   */
+  settings: {
+    protectImages: true,
+  },
+
   /* -------- Brand -------- */
   brand: {
     name: "Manikchand",
