@@ -410,15 +410,27 @@
   /* ---------- Boot ---------- */
   function init() {
     if (!window.SITE_DATA) { console.error("SITE_DATA not found. Check js/data.js"); return; }
-    renderWarnStrip();
-    renderHeader();
-    renderHero();
-    renderAbout();
-    renderProducts();
-    renderQuality();
-    renderGallery();
-    renderContact();
-    renderFooter();
+
+    /* The page can be prerendered at build time (see scripts/prerender.js).
+     * In production the static HTML is already filled in, so we hydrate:
+     * skip the destructive re-render (which would cause a reveal-animation
+     * flash) and only wire up interactivity.
+     * During the build (__PRERENDER__) we always render to apply data.js. */
+    var forceRender = !!window.__PRERENDER__;
+    var alreadyRendered =
+      !forceRender && el("products") && el("products").children.length > 0;
+
+    if (!alreadyRendered) {
+      renderWarnStrip();
+      renderHeader();
+      renderHero();
+      renderAbout();
+      renderProducts();
+      renderQuality();
+      renderGallery();
+      renderContact();
+      renderFooter();
+    }
     initInteractions();
     initImageProtection();
   }

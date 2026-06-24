@@ -2,7 +2,11 @@
 
 A premium, responsive, single-page static website for **Manikchand Pan Masala** by
 **Global Manikchand Corporation of India**. Built with plain HTML + CSS + vanilla
-JavaScript - no build step, no framework, hostable anywhere.
+JavaScript, with a small Node prerender step for SEO.
+
+> Update: this site now has a build step (`npm run build`) that prerenders
+> `index.html` from `js/data.js` for SEO. See `README.md` and
+> `docs/llm-project-understanding.md`. The notes below describe the original design.
 
 ---
 

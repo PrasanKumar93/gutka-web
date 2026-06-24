@@ -1,0 +1,12 @@
+{
+  "name": "gutka-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Manikchand Pan Masala marketing website (static, data-driven).",
+  "scripts": {
+    "build": "node scripts/prerender.js"
+  },
+  "devDependencies": {
+    "jsdom": "^24.1.0"
+  }
+}
